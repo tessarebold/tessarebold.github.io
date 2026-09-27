@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +40,7 @@
     }
 
     .logo {
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 30px;
       font-style: italic;
     }
@@ -57,14 +58,18 @@
       letter-spacing: 1.5px;
     }
 
+    .nav-links a:hover {
+      opacity: 0.6;
+    }
+
     /* HERO */
 
     .hero {
       display: grid;
-      grid-template-columns: 1fr 0.85fr;
-      gap: 65px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 70px;
       align-items: center;
-      padding: 55px 0 75px;
+      padding: 55px 0 80px;
     }
 
     h1 {
@@ -72,15 +77,15 @@
       font-size: 70px;
       font-weight: normal;
       letter-spacing: -2px;
-      margin: 0 0 5px;
       line-height: 1.05;
+      margin: 0 0 8px;
     }
 
     .subtitle {
       text-transform: uppercase;
       letter-spacing: 4px;
       font-size: 13px;
-      margin: 15px 0 32px;
+      margin: 18px 0 30px;
       color: #5d6b64;
     }
 
@@ -93,19 +98,29 @@
 
     .hero-text {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 21px;
-      line-height: 1.55;
-      max-width: 590px;
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 580px;
       margin-bottom: 35px;
+    }
+
+    /* IMPORTANT:
+       This displays the original uploaded photo
+       without zooming or cropping it.
+    */
+
+    .photo-wrap {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 
     .hero-photo {
       width: 100%;
-      height: 570px;
-      object-fit: cover;
-      object-position: center 35%;
-      border-radius: 4px;
+      max-width: 390px;
+      height: auto;
       display: block;
+      border-radius: 5px;
     }
 
     .button {
@@ -141,7 +156,7 @@
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
+      gap: 75px;
     }
 
     .about-text {
@@ -151,7 +166,7 @@
       margin: 0;
     }
 
-    /* EXPLORING */
+    /* WHAT I'M EXPLORING */
 
     .exploring-list {
       list-style: none;
@@ -176,7 +191,6 @@
     .experience-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 0;
     }
 
     .experience-item {
@@ -195,15 +209,17 @@
     .experience-item h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 18px;
-      margin: 0 0 12px;
       font-weight: normal;
+      line-height: 1.3;
+      margin: 0 0 13px;
     }
 
     .experience-item .role {
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 11px;
-      margin-bottom: 5px;
+      letter-spacing: 1.4px;
+      font-size: 10px;
+      line-height: 1.5;
+      margin-bottom: 6px;
     }
 
     .experience-item .date {
@@ -215,6 +231,10 @@
 
     .education-item {
       margin-bottom: 30px;
+    }
+
+    .education-item:last-child {
+      margin-bottom: 0;
     }
 
     .education-item h3 {
@@ -253,27 +273,46 @@
         padding: 0 24px;
       }
 
+      nav {
+        padding: 22px 0;
+      }
+
       .nav-links {
         display: none;
       }
 
       .hero {
         grid-template-columns: 1fr;
-        gap: 35px;
-        padding-top: 30px;
+        gap: 45px;
+        padding: 35px 0 60px;
       }
 
       h1 {
         font-size: 52px;
       }
 
+      .subtitle {
+        letter-spacing: 2.5px;
+        line-height: 1.7;
+      }
+
+      .hero-text {
+        font-size: 19px;
+      }
+
+      .photo-wrap {
+        justify-content: center;
+      }
+
       .hero-photo {
-        height: 520px;
+        max-width: 400px;
+        width: 100%;
+        height: auto;
       }
 
       .two-column {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 50px;
       }
 
       .experience-grid {
@@ -290,23 +329,51 @@
       .experience-item:last-child {
         border-bottom: none;
       }
+
+      footer {
+        gap: 20px;
+      }
     }
+
   </style>
 </head>
+
 
 <body>
 
   <div class="page">
 
+    <!-- NAVIGATION -->
+
     <nav>
-      <div class="logo">TR</div>
+
+      <div class="logo">
+        TR
+      </div>
 
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="https://www.linkedin.com/in/tessrebold/" target="_blank">Contact</a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#education">
+          Education
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/tessrebold/"
+          target="_blank"
+        >
+          Contact
+        </a>
+
       </div>
+
     </nav>
 
 
@@ -317,7 +384,10 @@
       <div class="hero">
 
         <div>
-          <h1>Tessa Rebold</h1>
+
+          <h1>
+            Tessa Rebold
+          </h1>
 
           <div class="subtitle">
             MBA Candidate at UC Berkeley Haas
@@ -326,12 +396,15 @@
           <div class="small-line"></div>
 
           <div class="hero-text">
+
             I'm an MBA student with a background in consumer brands,
             sales, partnerships, and relationship-driven growth.
+
             I'm currently exploring venture capital and the startup world,
             with a particular interest in the consumer (CPG) space —
             and I'm passionate about building brands, businesses, and
             communities that people care about.
+
           </div>
 
           <a
@@ -341,48 +414,82 @@
           >
             Connect on LinkedIn →
           </a>
+
         </div>
 
-        <div>
+
+        <div class="photo-wrap">
+
           <img
             class="hero-photo"
             src="download.jpg"
             alt="Tessa Rebold"
           >
+
         </div>
 
       </div>
 
 
-      <!-- ABOUT + INTERESTS -->
+      <!-- ABOUT -->
 
       <section id="about">
 
         <div class="two-column">
 
           <div>
-            <h2 class="section-title">About Me</h2>
+
+            <h2 class="section-title">
+              About Me
+            </h2>
 
             <p class="about-text">
+
               I'm currently pursuing my MBA at the University of California,
-              Berkeley, Haas School of Business. Before Haas, I worked across
-              consumer brands, media, and business development, most recently
-              leading the New York market for 818 Tequila. My experience has
-              centered around building relationships, growing brands, and
-              turning strategy into execution.
+              Berkeley, Haas School of Business.
+
+              Before Haas, I worked across consumer brands, media, and
+              business development, most recently leading the New York market
+              for 818 Tequila.
+
+              My experience has centered around building relationships,
+              growing brands, and turning strategy into execution.
+
             </p>
+
           </div>
 
+
           <div>
-            <h2 class="section-title">What I'm Exploring</h2>
+
+            <h2 class="section-title">
+              What I'm Exploring
+            </h2>
 
             <ul class="exploring-list">
-              <li>Venture capital & early-stage investing</li>
-              <li>Consumer brands (CPG), food & beverage</li>
-              <li>Startups & entrepreneurship</li>
-              <li>Strategic partnerships & business development</li>
-              <li>Community-driven brands with impact</li>
+
+              <li>
+                Venture capital & early-stage investing
+              </li>
+
+              <li>
+                Consumer brands (CPG), food & beverage
+              </li>
+
+              <li>
+                Startups & entrepreneurship
+              </li>
+
+              <li>
+                Strategic partnerships & business development
+              </li>
+
+              <li>
+                Community-driven brands with impact
+              </li>
+
             </ul>
+
           </div>
 
         </div>
@@ -394,38 +501,95 @@
 
       <section id="experience">
 
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title">
+          Experience
+        </h2>
+
 
         <div class="experience-grid">
 
           <div class="experience-item">
-            <h3>UC Berkeley Haas</h3>
-            <div class="role">MBA Candidate</div>
-            <div class="date">Class of 2028</div>
+
+            <h3>
+              UC Berkeley Haas
+            </h3>
+
+            <div class="role">
+              MBA Candidate
+            </div>
+
+            <div class="date">
+              Class of 2028
+            </div>
+
           </div>
 
-          <div class="experience-item">
-            <h3>Cross Ocean Partners</h3>
-            <div class="role">Investor Relations & Fundraising</div>
-            <div class="date">Summer 2026</div>
-          </div>
 
           <div class="experience-item">
-            <h3>818 Tequila</h3>
-            <div class="role">New York Market Manager</div>
-            <div class="date">2024–2026</div>
+
+            <h3>
+              Cross Ocean Partners
+            </h3>
+
+            <div class="role">
+              Investor Relations & Fundraising
+            </div>
+
+            <div class="date">
+              Summer 2026
+            </div>
+
           </div>
 
-          <div class="experience-item">
-            <h3>Calirosa Tequila</h3>
-            <div class="role">New York Market Manager</div>
-            <div class="date">2023–2024</div>
-          </div>
 
           <div class="experience-item">
-            <h3>iHeartMedia</h3>
-            <div class="role">National Sales</div>
-            <div class="date">2021–2022</div>
+
+            <h3>
+              818 Tequila
+            </h3>
+
+            <div class="role">
+              New York Market Manager
+            </div>
+
+            <div class="date">
+              2024–2026
+            </div>
+
+          </div>
+
+
+          <div class="experience-item">
+
+            <h3>
+              Calirosa Tequila
+            </h3>
+
+            <div class="role">
+              New York Market Manager
+            </div>
+
+            <div class="date">
+              2023–2024
+            </div>
+
+          </div>
+
+
+          <div class="experience-item">
+
+            <h3>
+              iHeartMedia
+            </h3>
+
+            <div class="role">
+              National Sales
+            </div>
+
+            <div class="date">
+              2021–2022
+            </div>
+
           </div>
 
         </div>
@@ -437,16 +601,34 @@
 
       <section id="education">
 
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title">
+          Education
+        </h2>
+
 
         <div class="education-item">
-          <h3>University of California, Berkeley — Haas School of Business</h3>
-          <p>Master of Business Administration · 2026–2028</p>
+
+          <h3>
+            University of California, Berkeley — Haas School of Business
+          </h3>
+
+          <p>
+            Master of Business Administration · 2026–2028
+          </p>
+
         </div>
 
+
         <div class="education-item">
-          <h3>Tulane University</h3>
-          <p>B.A. Communications & Dance · Minor in Business Management</p>
+
+          <h3>
+            Tulane University
+          </h3>
+
+          <p>
+            B.A. Communications & Dance · Minor in Business Management
+          </p>
+
         </div>
 
       </section>
@@ -454,8 +636,13 @@
     </main>
 
 
+    <!-- FOOTER -->
+
     <footer>
-      <span>© 2026 Tessa Rebold</span>
+
+      <span>
+        © 2026 Tessa Rebold
+      </span>
 
       <a
         href="https://www.linkedin.com/in/tessrebold/"
@@ -463,9 +650,11 @@
       >
         LinkedIn ↗
       </a>
+
     </footer>
 
   </div>
 
 </body>
+
 </html>
